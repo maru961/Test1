@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="Stream of vending amchine issue events" documentationContent="" effectiveThingPackage="StreamThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-08-10T10:41:58.710-04:00" name="VendingMachineIssueStream" projectName="" published="false" tags="Applications:ThingWorxTraining" thingTemplate="Stream" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="STRING" description="Persistence Provider Name" name="persistenceProvider" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider><![CDATA[ThingworxPersistenceProvider]]></persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json><![CDATA[{"fieldDefinitions":{"CurrentHumidity":{"name":"CurrentHumidity","aspects":{"units":"%"},"description":"","baseType":"NUMBER","ordinal":0},"Type":{"name":"Type","aspects":{},"description":"","baseType":"STRING","ordinal":2},"CurrentTemperature":{"name":"CurrentTemperature","aspects":{"units":"F"},"description":"","baseType":"NUMBER","ordinal":1}}}]]></json>
+                            </accumulatedDataShape>
+                            <dataShape><![CDATA[VendingmachineIssueData]]></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2017-08-10T10:41:58.710-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>

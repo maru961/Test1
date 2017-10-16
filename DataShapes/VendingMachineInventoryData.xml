@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="Datashape for vending machine inventory" documentationContent="" homeMashup="" lastModifiedDate="2017-08-09T14:40:43.128-04:00" name="VendingMachineInventoryData" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="NUMBER" description="" name="currentInvQty" ordinal="3"/>
+                <FieldDefinition baseType="NUMBER" description="" name="positionCapacity" ordinal="4"/>
+                <FieldDefinition baseType="STRING" description="ProductID" name="productID" ordinal="2"/>
+                <FieldDefinition baseType="NUMBER" description="" name="productPrice" ordinal="5"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="NUMBER" description="Vending Postion of Product" name="vendPosition" ordinal="1"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated&#10;fields : vendPosition : Added, productID : Added, currentInvQty : Added, positionCapacity : Added, productPrice : Added&#10;" timestamp="2017-08-09T14:40:43.128-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>

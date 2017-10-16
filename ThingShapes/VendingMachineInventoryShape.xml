@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingShapes>
+        <ThingShape className="" description="Shape for Vending INventory " documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T09:48:51.200-04:00" name="VendingMachineInventoryShape" projectName="" tags="Applications:ThingWorxTraining">
+            <PropertyDefinitions>
+                <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="ALWAYS" aspect.dataShape="VendingMachineInventoryData" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INFOTABLE" category="" description="" isLocalOnly="false" name="CurrentInventory" ordinal="1"/>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Add Inventory to Vending Machine" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddInventory">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="NUMBER" description="" name="CurrentInvQty" ordinal="3"/>
+                        <FieldDefinition baseType="NUMBER" description="" name="PositionCapacity" ordinal="4"/>
+                        <FieldDefinition baseType="STRING" description="" name="ProductID" ordinal="2"/>
+                        <FieldDefinition baseType="NUMBER" description="" name="ProductPrice" ordinal="5"/>
+                        <FieldDefinition baseType="NUMBER" description="" name="VendingPosition" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Delete Inventory from the Vending Machine" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DeleteInventory">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="STRING" description="" name="ProductID" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Retrieve the Products priced higher than a given price." isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ProductPricedOver">
+                    <ResultType aspect.dataShape="VendingMachineInventoryData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition baseType="NUMBER" description="" name="Price" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Calculate the Sales Per Product" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SalePerProduct">
+                    <ResultType aspect.dataShape="VMProductSalesData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions/>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Calculate Total Sales" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="TotalSales">
+                    <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions/>
+                </ServiceDefinition>
+                <ServiceDefinition aspect.isAsync="false" category="" description="Updates inventory" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateInventory">
+                    <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                    <ParameterDefinitions>
+                        <FieldDefinition aspect.dataShape="VendingMachineInventoryData" baseType="INFOTABLE" description="" name="Inventory" ordinal="1"/>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions/>
+            <ServiceMappings/>
+            <ServiceImplementations>
+                <ServiceImplementation description="" handlerName="Script" name="AddInventory">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var newInv = me.CurrentInventory;
+newInv.AddRow({
+    vendPosition : VendingPosition,
+    productID : ProductID,
+    currentInvQty : CurrentInvQty,
+    positionCapacity : PositionCapacity,
+    productPrice : ProductPrice
+});
+me.CurrentInventory = newInv;
+    ]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="DeleteInventory">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var newInv = me.CurrentInventory;
+
+newInv.Delete({
+    productID : ProductID
+});
+me.CurrentInventory = newInv; ]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="ProductPricedOver">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var query = { filters: {
+    type: "GT",
+    fieldName: "productPrice",
+    value : Price
+}};
+
+var result = Resources['InfoTableFunctions'].Query({
+    query : query,
+    t : me.CurrentInventory
+});]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="SalePerProduct">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var newInv = me.CurrentInventory;
+var params = {
+    types : "NUMBER",
+    columns : "SalesPerProduct",
+    t : newInv,
+    expressions : "((positionCapacity-currentInvQty)*productPrice)"
+}
+
+var result = Resources['InfoTableFunctions'].DeriveFields(params);]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="TotalSales">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[var salesPerProduct =  me.SalePerProduct();
+var params = {
+    columns: "SalesPerProduct",
+    aggregates: "SUM",
+    t : salesPerProduct
+};
+
+var totalSales = Resources['InfoTableFunctions'].Aggregate(params);
+var result = totalSales.SUM_SalesPerProduct;
+]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation description="" handlerName="Script" name="UpdateInventory">
+                    <ConfigurationTables>
+                        <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code><![CDATA[me.CurrentInventory = Inventory;]]></code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions/>
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated, documentationContent : updated&#10;properties : CurrentInventory : Added, Updated&#10;" timestamp="2017-08-09T16:19:21.836-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddInventory : Description updated, Inputs updated, Code Updated, Service Added,  : Input parameter VendingPosition Added, Input parameter ProductID Added, Input parameter CurrentInvQty Added, Input parameter PositionCapacity Added, Input parameter ProductPrice Added&#10;" timestamp="2017-08-09T16:28:34.240-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddInventory : Code Updated&#10;" timestamp="2017-08-09T16:31:11.834-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-09T16:31:14.135-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : DeleteInventory : Description updated, Inputs updated, Code Updated, Service Added,  : Input parameter ProductId Added&#10;" timestamp="2017-08-09T16:37:37.602-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-09T16:37:45.990-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : CurrentInventory : Updated&#10;services : DeleteInventory : Input parameter ProductID Updated, Inputs updated&#10;" timestamp="2017-08-09T16:42:41.376-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-09T16:42:42.182-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-09T16:42:53.918-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Code Updated, SalePerProduct : Description updated, Output Updated, Service Added&#10;" timestamp="2017-08-10T09:13:02.401-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T09:13:03.778-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T09:13:04.151-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T09:13:04.341-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TotalSales : Description updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2017-08-10T09:33:01.091-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : ProductPricedOver : Description updated, Inputs updated, Output Updated, Code Updated, Service Added,  : Input parameter Price Added&#10;" timestamp="2017-08-10T09:44:45.840-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UpdateInventory : Description updated, Inputs updated, Code Updated, Service Added,  : Input parameter Inventory Added&#10;" timestamp="2017-08-10T09:48:50.154-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T09:48:51.200-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="CurrentInventory"/>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions/>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

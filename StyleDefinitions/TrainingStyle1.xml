@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StyleDefinitions>
+        <StyleDefinition description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T16:35:14.632-04:00" name="TrainingStyle1" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"image":"","backgroundColor":"#281eff","textSize":"normal","lineStyle":"solid","displayString":"sample","fontEmphasisUnderline":false,"fontEmphasisItalic":false,"lineThickness":1,"foregroundColor":"#ff340a","lineColor":"#000000","fontEmphasisBold":false,"secondaryBackgroundColor":"#66cc33"}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;" timestamp="2017-08-10T16:32:53.785-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : displayString : updated, backgroundColor : updated, secondaryBackgroundColor : updated, foregroundColor : updated, lineColor : updated&#10;" timestamp="2017-08-10T16:35:06.929-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T16:35:11.153-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-10T16:35:14.632-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>

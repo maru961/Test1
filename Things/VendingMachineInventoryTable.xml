@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-08-09T14:46:47.835-04:00" name="VendingMachineInventoryTable" projectName="" published="false" tags="Applications:ThingWorxTraining" thingTemplate="DataTable" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Data Thing Configuration" isMultiRow="false" name="DataThingSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="STRING" description="Persistence Provider Name" name="persistenceProvider" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider><![CDATA[ThingworxPersistenceProvider]]></persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Index Settings" isMultiRow="true" name="Indexes" ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Index Field Names" baseType="STRING" description="Index fields" name="fieldNames" ordinal="1"/>
+                            <FieldDefinition aspect.friendlyName="Index Name" baseType="STRING" description="Index name" name="name" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows/>
+                </ConfigurationTable>
+                <ConfigurationTable description="Data Shape Configuration" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Data Shape" baseType="DATASHAPENAME" description="Data shape" name="dataShape" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json><![CDATA[{"fieldDefinitions":{"productID":{"name":"productID","aspects":{},"description":"ProductID","baseType":"STRING","ordinal":2},"currentInvQty":{"name":"currentInvQty","aspects":{},"description":"","baseType":"NUMBER","ordinal":0},"positionCapacity":{"name":"positionCapacity","aspects":{},"description":"","baseType":"NUMBER","ordinal":1},"vendPosition":{"name":"vendPosition","aspects":{"isPrimaryKey":true},"description":"Vending Postion of Product","baseType":"NUMBER","ordinal":4},"productPrice":{"name":"productPrice","aspects":{},"description":"","baseType":"NUMBER","ordinal":3}}}]]></json>
+                            </accumulatedDataShape>
+                            <dataShape><![CDATA[VendingMachineInventoryData]]></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="EnterMyInfo">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="NUMBER" description="" name="Capacity" ordinal="2"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Current" ordinal="1"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Position" ordinal="3"/>
+                            <FieldDefinition baseType="NUMBER" description="" name="Price" ordinal="4"/>
+                            <FieldDefinition baseType="STRING" description="" name="ProductID" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="EnterMyInfo">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// tags:TAGS
+var tags = new Array();
+
+// values:INFOTABLE(Datashape: VendingMachineInventoryData)
+var values = Things["VendingMachineInventoryTable"].CreateValues();
+
+values.productID = ProductID; //STRING
+values.currentInvQty = Current; //NUMBER
+values.vendPosition = Position; //NUMBER [Primary Key]
+values.positionCapacity = Capacity; //NUMBER
+values.productPrice = Price; //NUMBER
+
+// location:LOCATION
+var location = new Object();
+location.latitude = 0;
+location.longitude = 0;
+location.elevation = 0;
+location.units ="WGS84";
+
+var params = {
+	tags : tags,
+	source : me.name,
+	values : values,
+	location : location
+};
+
+// AddOrUpdateDataTableEntry(tags:TAGS, source:STRING("me.name"), values:INFOTABLE(VendingMachineInventoryTable), location:LOCATION):STRING
+var id = Things["VendingMachineInventoryTable"].AddOrUpdateDataTableEntry(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2017-08-09T14:40:48.928-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-08-09T14:41:03.828-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : EnterMyInfo : Code Updated, Inputs updated, Service Added,  : Input parameter Current Added, Input parameter Capacity Added, Input parameter Position Added, Input parameter Price Added, Input parameter ProductID Added&#10;" timestamp="2017-08-09T14:46:47.834-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>

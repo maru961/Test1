@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StyleDefinitions>
+        <StyleDefinition description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T16:38:09.488-04:00" name="TrainingStyle3" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"image":"","backgroundColor":"#efff53","textSize":"normal","lineStyle":"solid","displayString":"sample","fontEmphasisUnderline":false,"fontEmphasisItalic":false,"lineThickness":1,"foregroundColor":"#8dffed","lineColor":"#000000","fontEmphasisBold":false,"secondaryBackgroundColor":""}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, displayString : updated, backgroundColor : updated, foregroundColor : updated, lineColor : updated&#10;" timestamp="2017-08-10T16:38:09.488-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>

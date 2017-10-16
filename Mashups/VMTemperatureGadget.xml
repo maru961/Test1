@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="gadget" columns="1.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-11T12:32:41.389-04:00" name="VMTemperatureGadget" projectName="" rows="1.0" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things/>
+            <ThingShapes/>
+            <ThingTemplates>
+                <ThingTemplate>VendingMachineTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ ],
+      "Properties" : {
+        "AutoRefreshTabSequence" : 0,
+        "Left" : 30,
+        "ShowDataLoading" : true,
+        "Label" : "Refresh Now",
+        "FocusStyle" : "DefaultButtonFocusStyle",
+        "ShowControls" : true,
+        "RefreshToggleStyleOff" : "DefaultAutoRefreshToggleOffStyle",
+        "IconAlignment" : "left",
+        "RefreshInterval" : 30,
+        "Visible" : false,
+        "DisplayName" : "autorefresh-1",
+        "Style" : "DefaultButtonStyle",
+        "Height" : 28,
+        "Width" : 180,
+        "RefreshToggleStyle" : "DefaultAutoRefreshToggleStyle",
+        "ResponsiveLayout" : false,
+        "RefreshNowTabSequence" : 0,
+        "RefreshToggleSliderStyle" : "DefaultAutoRefreshToggleSliderStyle",
+        "Z-index" : 10,
+        "RefreshToggleLabelOff" : "Off",
+        "__TypeDisplayName" : "Auto Refresh",
+        "RefreshToggleLabel" : "On",
+        "HoverStyle" : "DefaultButtonHoverStyle",
+        "Area" : "UI",
+        "Type" : "autorefresh",
+        "Top" : 210,
+        "Id" : "autorefresh-1",
+        "ActiveStyle" : "DefaultButtonActiveStyle",
+        "AutoRefresh" : true
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Intervals" : 10,
+        "LabelDisplayMode" : "inside",
+        "Legend" : "",
+        "GaugeBorder" : 20,
+        "TickStyle" : "DefaultGaugeTickStyle",
+        "Left" : 30,
+        "ShowDataLoading" : true,
+        "Aperture" : 270,
+        "ValueDigits" : 3,
+        "LegendDisplayMode" : "bottom",
+        "ToolTipField" : "",
+        "ValueStyle" : "DefaultGaugeValueStyle",
+        "CenterStyle" : "DefaultGaugeCenterStyle",
+        "MinorTickLength" : 4,
+        "FormatNeedle" : true,
+        "MinValue" : 0,
+        "Visible" : true,
+        "DisplayName" : "gauge-2",
+        "IntervalsPerLabel" : 2,
+        "Height" : 160,
+        "LabelDecimals" : 0,
+        "ValueDecimals" : 0,
+        "LegendStyle" : "DefaultGaugeLegendStyle",
+        "Width" : 180,
+        "GaugeStyle" : "DefaultGaugeStyle",
+        "NeedleStyle" : "DefaultGaugeNeedleStyle",
+        "RingWidth" : 10,
+        "ResponsiveLayout" : false,
+        "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+        "Z-index" : 10,
+        "LabelStyle" : "DefaultGaugeLabelStyle",
+        "MaxValue" : 100,
+        "__TypeDisplayName" : "Gauge",
+        "TickLength" : 8,
+        "Area" : "UI",
+        "Type" : "gauge",
+        "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+        "Top" : 40,
+        "ReferenceAngle" : 225,
+        "ValueDisplayMode" : "none",
+        "MinorTicks" : 4,
+        "CenterDiameter" : 20,
+        "Id" : "gauge-2",
+        "NeedleDiameter" : 10,
+        "LabelDigits" : 3
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 2,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultDashboardGadgetStyle",
+      "BGImageSize" : "auto",
+      "Height" : 240,
+      "Width" : 240,
+      "TitleBar" : true,
+      "Rows" : 1,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "Title" : "",
+      "Columns" : 1,
+      "Z-index" : 10,
+      "TitleBarText" : "Temperature",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "844a7bb0-ccfb-4ac3-a7b5-217925309657",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Session",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "Session",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "EntityChanged",
+    "Id" : "262936c8-b66a-4377-83bf-15482d025861",
+    "EventTriggerId" : "Session",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+    "EventTriggerEvent" : "Refresh",
+    "Id" : "c4bd100c-1313-4f0f-b609-e8fe76f0fd7a",
+    "EventTriggerId" : "autorefresh-1",
+    "EventHandlerArea" : "Data"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Session",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceId" : "Session",
+    "Id" : "8a44d243-9beb-4153-8b38-88b91c4870f8",
+    "SourceSection" : "Session",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "value",
+      "TargetPropertyType" : "Entity",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "Entity"
+    } ],
+    "TargetId" : "EntityName"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "fb4591c6-d890-42b2-a318-3005109cb26f",
+    "SourceSection" : "DynamicThingTemplates_VendingMachineTemplate",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "CurrentTemperature"
+    } ],
+    "TargetId" : "gauge-2"
+  } ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "DynamicThingTemplates_VendingMachineTemplate" : {
+      "EntityType" : "DynamicThingTemplates",
+      "Services" : [ {
+        "Target" : "GetProperties",
+        "Parameters" : { },
+        "APIMethod" : "get",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "d9be2aec-f30d-48e9-acb4-8d438c3c9bf1",
+        "Name" : "GetProperties"
+      } ],
+      "EntityName" : "VendingMachineTemplate",
+      "Id" : "9af87da5-dbe5-486a-81f6-e081394e5d98",
+      "DataName" : "DynamicThingTemplates_VendingMachineTemplate"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2017-08-11T12:32:41.389-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>

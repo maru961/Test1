@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Users>
+        <User description="" documentationContent="" enabled="true" homeMashup="" lastModifiedDate="2017-08-11T11:43:20.117-04:00" locked="false" lockedTime="2016-08-11T11:42:51.642-04:00" mobileMashup="" name="Technician" passwordHash="100000:8102d241881ecca173af439ff7725b9173b08754979bd349f81279ed0e66dc5b7e1f85c36df49393c63a7d60b57179746df79e743346d6b7023a606413c11b48:74fb3d16e604234648faf1964b4779b0fadd6b9f4a7d3c476485736d0e138bf2f0bf61cb95f2e560bf3220bc59bbd299924150a1f1f57a91f25e4e79d2774a5a" passwordHashAlgorithm="PBKDF2WithHmacSHA512" passwordHashIterationCount="100000" passwordHashSaltSizeInBytes="64" passwordHashSizeInBytes="64" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Settings" isMultiRow="false" name="Settings" ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPrimaryKey="true" baseType="STRING" description="Primary language" name="language" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <language/>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="UserExtensions" isMultiRow="true" name="UserExtensions" ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="Last update time" name="lastUpdateTime" ordinal="3"/>
+                            <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="Name" name="name" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="Value" name="value" ordinal="2"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <name><![CDATA[lastName]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[firstName]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[emailAddress]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[Department]]></name>
+                            <value><![CDATA[Vending Maintanence]]></value>
+                            <lastUpdateTime>2017-08-11T11:43:20.117-04:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[smsAddress]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[mobilePhone]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[homePhone]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[middleName]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[workPhone]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                        <Row>
+                            <name><![CDATA[title]]></name>
+                            <value/>
+                            <lastUpdateTime>1969-12-31T19:00:00.000-05:00</lastUpdateTime>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PersistentValues>
+                <PersistentValue name="User_MashupFavorites"><![CDATA[{"rows":[{"items":[]}]}]]></PersistentValue>
+            </PersistentValues>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, plainTextPassword : updated&#10;" timestamp="2017-08-11T11:42:51.970-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-11T11:43:20.116-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </User>
+    </Users>
+</Entities>

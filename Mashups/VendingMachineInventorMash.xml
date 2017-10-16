@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-09T16:14:48.880-04:00" name="VendingMachineInventorMash" projectName="" rows="0.0" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>VendingMachineInventoryTable</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Minimum" : 0,
+              "Left" : 45,
+              "ValueAlign" : "right",
+              "ShowDataLoading" : true,
+              "Label" : "Position",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "Maximum" : 100,
+              "ConstrainValue" : false,
+              "Visible" : true,
+              "DisplayName" : "numericentry-6",
+              "FixedDigits" : 0,
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 165,
+              "AllowDecimals" : true,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+              "__TypeDisplayName" : "Numeric Entry",
+              "Area" : "UI",
+              "Type" : "numericentry",
+              "NumericEntryFocusStyle" : "DefaultFocusStyle",
+              "Top" : 15,
+              "AllowNegatives" : true,
+              "Value" : 0,
+              "Id" : "numericentry-6"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Minimum" : 0,
+              "Left" : 527.5,
+              "ValueAlign" : "right",
+              "ShowDataLoading" : true,
+              "Label" : "Current Qty",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "Maximum" : 100,
+              "ConstrainValue" : false,
+              "Visible" : true,
+              "DisplayName" : "numericentry-7",
+              "FixedDigits" : 0,
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 165,
+              "AllowDecimals" : true,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+              "__TypeDisplayName" : "Numeric Entry",
+              "Area" : "UI",
+              "Type" : "numericentry",
+              "NumericEntryFocusStyle" : "DefaultFocusStyle",
+              "Top" : 16,
+              "AllowNegatives" : true,
+              "Value" : 0,
+              "Id" : "numericentry-7"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 286.25,
+              "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+              "ShowDataLoading" : true,
+              "Label" : "Product ID",
+              "PlaceholderText" : "",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "TextAlign" : "left",
+              "Visible" : true,
+              "DisplayName" : "textbox-8",
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 165,
+              "ReadOnly" : false,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "Text" : "",
+              "__TypeDisplayName" : "TextBox",
+              "Area" : "UI",
+              "Type" : "textbox",
+              "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+              "MaskInputCharacters" : false,
+              "Top" : 8,
+              "CursorPosition" : 0,
+              "Id" : "textbox-8"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Minimum" : 0,
+              "Left" : 788.75,
+              "ValueAlign" : "right",
+              "ShowDataLoading" : true,
+              "Label" : "Max Capacity",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "Maximum" : 100,
+              "ConstrainValue" : false,
+              "Visible" : true,
+              "DisplayName" : "numericentry-9",
+              "FixedDigits" : 0,
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 165,
+              "AllowDecimals" : true,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+              "__TypeDisplayName" : "Numeric Entry",
+              "Area" : "UI",
+              "Type" : "numericentry",
+              "NumericEntryFocusStyle" : "DefaultFocusStyle",
+              "Top" : 14,
+              "AllowNegatives" : true,
+              "Value" : 0,
+              "Id" : "numericentry-9"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Minimum" : 0,
+              "Left" : 1055,
+              "ValueAlign" : "right",
+              "ShowDataLoading" : true,
+              "Label" : "Price",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "Maximum" : 100,
+              "ConstrainValue" : false,
+              "Visible" : true,
+              "DisplayName" : "numericentry-10",
+              "FixedDigits" : 0,
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 165,
+              "AllowDecimals" : true,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+              "__TypeDisplayName" : "Numeric Entry",
+              "Area" : "UI",
+              "Type" : "numericentry",
+              "NumericEntryFocusStyle" : "DefaultFocusStyle",
+              "Top" : 12,
+              "AllowNegatives" : true,
+              "Value" : 0,
+              "Id" : "numericentry-10"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 35,
+              "CancelConfirmationButton" : "button2",
+              "ShowDataLoading" : true,
+              "Label" : "View/Edit",
+              "FocusStyle" : "DefaultButtonFocusStyle",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "IconAlignment" : "left",
+              "Visible" : true,
+              "DisplayName" : "button-12",
+              "Style" : "DefaultButtonStyle",
+              "Height" : 30,
+              "DisabledStyle" : "DefaultButtonDisabledStyle",
+              "ConfirmationTitle" : "Confirm Action",
+              "Disabled" : false,
+              "Width" : 75,
+              "ResponsiveLayout" : false,
+              "ConfirmationPrompt" : "Do Action?",
+              "Z-index" : 10,
+              "ConfirmationButton1Label" : "Yes",
+              "RoundedCorners" : true,
+              "__TypeDisplayName" : "Button",
+              "HoverStyle" : "DefaultButtonHoverStyle",
+              "Area" : "UI",
+              "Type" : "button",
+              "Top" : 65,
+              "DefaultConfirmationButton" : "button1",
+              "ContextId" : "",
+              "ConfirmationRequired" : false,
+              "Id" : "button-12",
+              "ConfirmationButton2Label" : "No",
+              "ActiveStyle" : "DefaultButtonActiveStyle"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 140,
+              "CancelConfirmationButton" : "button2",
+              "ShowDataLoading" : true,
+              "Label" : "Delete",
+              "FocusStyle" : "DefaultButtonFocusStyle",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "IconAlignment" : "left",
+              "Visible" : true,
+              "DisplayName" : "button-14",
+              "Style" : "DefaultButtonStyle",
+              "Height" : 30,
+              "DisabledStyle" : "DefaultButtonDisabledStyle",
+              "ConfirmationTitle" : "Confirm Action",
+              "Disabled" : false,
+              "Width" : 75,
+              "ResponsiveLayout" : false,
+              "ConfirmationPrompt" : "Do Action?",
+              "Z-index" : 10,
+              "ConfirmationButton1Label" : "Yes",
+              "RoundedCorners" : true,
+              "__TypeDisplayName" : "Button",
+              "HoverStyle" : "DefaultButtonHoverStyle",
+              "Area" : "UI",
+              "Type" : "button",
+              "Top" : 65,
+              "DefaultConfirmationButton" : "button1",
+              "ContextId" : "",
+              "ConfirmationRequired" : false,
+              "Id" : "button-14",
+              "ConfirmationButton2Label" : "No",
+              "ActiveStyle" : "DefaultButtonActiveStyle"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 55,
+            "HideScrollbars" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "Z-index" : 10,
+            "VerticalAnchor" : "top",
+            "__TypeDisplayName" : "Panel",
+            "HorizontalAnchor" : "left",
+            "Area" : "UI",
+            "Type" : "panel",
+            "Top" : 30,
+            "Visible" : true,
+            "DisplayName" : "panel-5",
+            "Style" : "DefaultPanelStyle",
+            "Height" : 200,
+            "Id" : "panel-5",
+            "Width" : 300
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Header",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ ],
+          "Properties" : {
+            "RowSelectedStyle" : "DefaultRowSelectedStyle",
+            "IsEditable" : false,
+            "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+            "Left" : 470,
+            "ShowDataLoading" : true,
+            "GridHeaderStyle" : "DefaultGridHeaderStyle",
+            "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+            "FocusStyle" : "DefaultFocusStyle",
+            "TabSequence" : 0,
+            "CellTextWrapping" : false,
+            "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+            "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+            "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+            "Visible" : true,
+            "DisplayName" : "dhxgrid-4",
+            "Height" : 200,
+            "Width" : 400,
+            "MultiSelect" : false,
+            "CurrentScrollTop" : 0,
+            "ResponsiveLayout" : true,
+            "ShowAllColumns" : false,
+            "Z-index" : 10,
+            "AlignHeader" : false,
+            "__TypeDisplayName" : "Grid",
+            "ScrollTop" : 0,
+            "RowHeight" : 30,
+            "ColumnFormat" : {
+              "formatInfo" : [ {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "vendPosition",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "vendPosition",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "left",
+                "AllowEdit" : false,
+                "Title" : "productID",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "STRING",
+                  "FormatString" : "full"
+                },
+                "FieldName" : "productID",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "currentInvQty",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "currentInvQty",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "positionCapacity",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "positionCapacity",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "productPrice",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "productPrice",
+                "Width" : "auto"
+              } ]
+            },
+            "Area" : "UI",
+            "Type" : "dhxgrid",
+            "Top" : 155,
+            "IsPrintLayout" : false,
+            "Id" : "dhxgrid-4",
+            "RowHoverStyle" : "DefaultRowHoverStyle",
+            "AutoSelectFirstRow" : false,
+            "GridHeaderTextCase" : "capitalize"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Row 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 430,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 100,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 0,
+        "FooterHeight" : 0,
+        "PctRow1" : 100,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "LeftSidebar" : false,
+        "RightSidebar" : false,
+        "PctColumn5" : 1,
+        "Visible" : true,
+        "DisplayName" : "layout-1",
+        "PctColumn6" : 1,
+        "PctColumn3" : 1,
+        "PrintWidth" : 650,
+        "PctColumn4" : 1,
+        "PctColumn1" : 50,
+        "PctColumn2" : 50,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 1,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "PctColumn8" : 1,
+        "ResponsiveLayout" : true,
+        "Columns" : 0,
+        "Z-index" : 10,
+        "Spacing" : 2,
+        "Orientation" : "vertical",
+        "__TypeDisplayName" : "Layout",
+        "Area" : "UI",
+        "Type" : "layout",
+        "LeftSidebarWidth" : 0,
+        "Header" : true,
+        "Top" : 125,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 14,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetDataTableEntries",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_VendingMachineInventoryTable",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "2e4e9e67-8420-4a17-af3b-b3956b1b7c68",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "EnterMyInfo",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_VendingMachineInventoryTable",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "04ac4b20-506c-4200-a8c0-7ed682884fdc",
+    "EventTriggerId" : "button-12",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetDataTableEntries",
+    "EventTriggerSection" : "Things_VendingMachineInventoryTable",
+    "EventHandlerId" : "Things_VendingMachineInventoryTable",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "c49a44b5-d54c-4a3d-acdc-8d0df611032b",
+    "EventTriggerId" : "EnterMyInfo",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "DeleteDataTableEntryByKey",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_VendingMachineInventoryTable",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "79e7e8fe-982a-4bfb-8514-046026b27477",
+    "EventTriggerId" : "button-14",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetDataTableEntries",
+    "EventTriggerSection" : "Things_VendingMachineInventoryTable",
+    "EventHandlerId" : "Things_VendingMachineInventoryTable",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "c2760514-fd40-451e-b830-2b85953178e3",
+    "EventTriggerId" : "DeleteDataTableEntryByKey",
+    "EventHandlerArea" : "Data"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "51ceed05-a59b-44ae-bcbd-570ec52287b9",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxgrid-4"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "numericentry-6",
+    "Id" : "8bfcedaa-f41c-4769-8d1f-b54d6078e56d",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Position",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EnterMyInfo"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "textbox-8",
+    "Id" : "5db4fb70-3072-44ab-89bd-e1ab38090bc1",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "ProductID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "EnterMyInfo"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "numericentry-7",
+    "Id" : "19bb8785-d4c2-4a48-a50e-e5df4df35a4d",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Current",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EnterMyInfo"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "numericentry-9",
+    "Id" : "0f521480-d1e8-4a13-b4f9-aff709ed49f1",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Capacity",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EnterMyInfo"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "numericentry-10",
+    "Id" : "51922132-65b5-41a5-93a2-8bc3e3a89683",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Price",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EnterMyInfo"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "283c22d8-d886-4bc0-af4b-cb34ce77d971",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "productID"
+    } ],
+    "TargetId" : "textbox-8"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "94ed6b04-dd91-466f-80dd-97e6ed185472",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "productPrice"
+    } ],
+    "TargetId" : "numericentry-10"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "c15d0297-4894-4c14-9c7e-923a69488e32",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "positionCapacity"
+    } ],
+    "TargetId" : "numericentry-9"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "a065b212-94db-4da5-9a3f-dbae64eeeaaf",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "currentInvQty"
+    } ],
+    "TargetId" : "numericentry-7"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "50ca2d66-c0ff-4ce1-a68c-6686743b6d2f",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "vendPosition"
+    } ],
+    "TargetId" : "numericentry-6"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_VendingMachineInventoryTable",
+    "SourceId" : "GetDataTableEntries",
+    "Id" : "ea3fe0cf-73d2-4d22-8ada-9f78d6bb04cf",
+    "SourceSection" : "Things_VendingMachineInventoryTable",
+    "SourceDetails" : "SelectedRows",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "key",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "key"
+    } ],
+    "TargetId" : "DeleteDataTableEntryByKey"
+  } ],
+  "Data" : {
+    "Things_VendingMachineInventoryTable" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "EnterMyInfo",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "e83f4b91-e82b-4b69-bbae-a6b5600e61d4",
+        "Name" : "EnterMyInfo"
+      }, {
+        "Target" : "GetDataTableEntries",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "3e9e6dad-c518-4066-b75c-584a8df50978",
+        "Name" : "GetDataTableEntries"
+      }, {
+        "Target" : "DeleteDataTableEntryByKey",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "da8c0eaf-b1f2-42fb-9389-2d55e9fdfe40",
+        "Name" : "DeleteDataTableEntryByKey"
+      } ],
+      "EntityName" : "VendingMachineInventoryTable",
+      "Id" : "89a1a677-5778-47fb-98b0-d3f940ebdf80",
+      "DataName" : "Things_VendingMachineInventoryTable"
+    },
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2017-08-09T16:14:48.880-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>

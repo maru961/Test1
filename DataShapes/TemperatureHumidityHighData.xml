@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="DataShape for Vending Machine Temperature and Humidity High Event" documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T10:55:30.211-04:00" name="TemperatureHumidityHighData" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="NUMBER" description="" name="VMCurHumidity" ordinal="3"/>
+                <FieldDefinition baseType="NUMBER" description="" name="VMCurTemperature" ordinal="4"/>
+                <FieldDefinition baseType="LOCATION" description="" name="VMLocation" ordinal="1"/>
+                <FieldDefinition baseType="DATETIME" description="" name="VMTime" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated&#10;fields : VMLocation : Added, VMTime : Added, VMCurHumidity : Added, VMCurTemperature : Added&#10;" timestamp="2017-08-10T10:55:30.211-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="data shape for the vending machine issure stream" documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T10:41:48.480-04:00" name="VendingmachineIssueData" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.units="%" baseType="NUMBER" description="" name="CurrentHumidity" ordinal="2"/>
+                <FieldDefinition aspect.units="F" baseType="NUMBER" description="" name="CurrentTemperature" ordinal="1"/>
+                <FieldDefinition baseType="STRING" description="" name="Type" ordinal="3"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, documentationContent : updated, tags : updated&#10;fields : CurrentTemperature : Added, CurrentHumidity : Added, Type : Added&#10;" timestamp="2017-08-10T10:41:48.479-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>

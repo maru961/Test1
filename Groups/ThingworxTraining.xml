@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Groups>
+        <Group description="Thingworx Training Group" documentationContent="" homeMashup="" lastModifiedDate="2017-08-11T11:45:30.685-04:00" name="ThingworxTraining" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <Members>
+                <Members>
+                    <Member name="Technician" type="User"/>
+                    <Member name="Driver" type="User"/>
+                </Members>
+            </Members>
+        </Group>
+    </Groups>
+</Entities>

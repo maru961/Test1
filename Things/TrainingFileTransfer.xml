@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="Modeled Remote Thing for File Transfer with Device side" documentationContent="" effectiveThingPackage="RemoteThingWithFileTransfer" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-08-10T15:11:37.455-04:00" name="TrainingFileTransfer" projectName="" published="false" tags="Applications:ThingWorxTraining" thingTemplate="RemoteThingWithFileTransfer" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <lastConnection>
+                    <Value>1969-12-31T19:00:00.000-05:00</Value>
+                    <Timestamp>2017-10-16T14:09:32.766-04:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </lastConnection>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, description : updated, tags : updated, thingTemplate : updated&#10;" timestamp="2017-08-10T15:11:37.455-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>

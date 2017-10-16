@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StateDefinitions>
+        <StateDefinition description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-10T16:49:43.478-04:00" name="TrainingStates" projectName="" tags="Applications:ThingWorxTraining">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"stateDefinitions":[{"comparator":"<","displayString":"Low","defaultStyleDefinition":"TrainingStyle1","defaultValue":1,"name":"Low","description":""},{"comparator":"<","displayString":"Medium","defaultStyleDefinition":"TrainingStyle2","defaultValue":2,"name":"Medium","description":""},{"displayString":"High","defaultStyleDefinition":"TrainingStyle3","defaultValue":"","name":"High","description":""}],"stateType":"numeric"}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;" timestamp="2017-08-10T16:49:43.478-04:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>
